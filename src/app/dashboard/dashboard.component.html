@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<section>
+  <div class="container-fluid py-5">
+    <div class="row">
+
+      <ng-container *ngFor="let item of productList;">
+        <div class="col-md-3">
+
+          <div class="card " style="margin:1rem;">
+
+            <div class="card-body" style="overflow: hidden;align-items: center;justify-content: center;">
+              <img src="{{item.image}}" alt="a2z" title="a2z{{item.title}}"
+                style="height:200px;width:250px;object-fit: contain;transition: 0.5s all ease-in-out;">
+                <br/><br/><br/>
+                <p style="height:26pt"> {{item.title}}</p>
+            </div>
+            <div class="card-footer bg-light">
+             
+              <div class="d-flex justify-content-between mb-3">
+                <h5 class="mb-0">${{item.price}}</h5>
+
+                <button class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart-plus">+</i> cart </button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+      </ng-container>
+
+
+
+    </div>
+  </div>
+</section>
